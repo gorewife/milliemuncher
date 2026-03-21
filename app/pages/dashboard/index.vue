@@ -1,6 +1,15 @@
-<template></template>
+<template>
+    <div class="dashboard">
+        <NuxtLink to="/dashboard/new">Write New Post</NuxtLink>
+        <NuxtLink to="/dashboard/upload">Upload Photo to Gallery</NuxtLink>
+    </div>
+</template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+definePageMeta({
+    middleware: 'auth'
+})
+</script>
 
 <style scoped>
 .dashboard {
